@@ -1,0 +1,44 @@
+{
+  "name": "miscreact",
+  "version": "1.0.0",
+  "description": "misc react app",
+  "main": "index.js",
+  "scripts": {
+    "test": "karma start",
+    "start": "node server.js"
+  },
+  "author": "Jaroslaw Gryko",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.15.3",
+    "express": "^4.13.4",
+    "react": "*",
+    "react-dom": "*",
+    "react-router": "*"
+  },
+  "devDependencies": {
+    "babel-core": "^6.5.1",
+    "babel-loader": "^6.2.2",
+    "babel-preset-es2015": "^6.5.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "css-loader": "^0.23.1",
+    "expect": "^1.20.2",
+    "foundation-sites": "^6.2.0",
+    "jquery": "^2.2.1",
+    "karma": "^1.4.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-mocha": "^1.3.0",
+    "karma-mocha-reporter": "^2.2.1",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^2.0.1",
+    "mocha": "^3.2.0",
+    "node-sass": "^4.3.0",
+    "papaparse": "^4.1.2",
+    "react-addons-test-utils": "^15.4.2",
+    "sass-loader": "^4.1.1",
+    "script-loader": "^0.6.1",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.13"
+  }
+}
