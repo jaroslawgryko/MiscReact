@@ -18,7 +18,9 @@ var Navigation = React.createClass({
                 </div>
                 <div className="top-bar-right">
                     <ul className="menu">
-                        <li className="menu-text">R</li>
+                        <li className="menu-text">
+                            R
+                        </li>
                     </ul>
                 </div>
             </div>

@@ -1,42 +1,63 @@
 var React = require('react');
-
-var OrganizationFileForm = require('OrganizationFileForm');
-var OrganizationCsvContent = require('OrganizationCsvContent');
-
-var Papa = require('papaparse');
+var OrganizationList = require('OrganizationList');
 
 var Organization = React.createClass({
-
 	getInitialState: function(){
 		return {
-			data: [],
-			columns: [],
-			totalCount: 0
+			unitsList: [
+				{
+					id: 1,
+					nazwa: 'Narodowe Centrum Nauki',
+					opis: '',
+					symbol: 'NCN',
+					nadrzedny: ''
+				},
+				{
+					id: 2,
+					nazwa: 'Dział Badań Naukowych i Rozwoju Naukowców',
+					opis: '',
+					symbol: 'BDR',
+					nadrzedny: 'NCN'
+				},
+				{
+					id: 3,
+					nazwa: 'Zespół ds. Nauk Humanistycznych, Społecznych i o Sztuce',
+					opis: '',
+					symbol: 'ZHS',
+					nadrzedny: 'DBR'
+				},
+				{
+					id: 4,
+					nazwa: 'Zespół ds. Nauk o Życiu',
+					opis: '',
+					symbol: 'ZNZ',
+					nadrzedny: 'DBR'
+				},
+				{
+					id: 5,
+					nazwa: 'Zespół ds. Nauk Ścisłych i Technicznych',
+					opis: '',
+					symbol: 'ZST',
+					nadrzedny: 'DBR'
+				},
+				{
+					id: 6,
+					nazwa: 'Zespół ds. Obsługi Dokumentacji Ekspertów',
+					opis: '',
+					symbol: 'ZDE',
+					nadrzedny: 'DBR'
+				}
+			]
 		}
 	},
-
-	handleDataChange: function(data){
-		this.setState({
-			data: data.data,
-			columns: data.meta.fields,
-			totalCount: data.data.length
-		});
+	handleUnitClick: function(id) {
+		alert(id);
 	},
-
-	handleFileSelection: function(file) {
-		Papa.parse(file, {
-			header: true,
-			dynamicTyping: true,
-			complete: this.handleDataChange
-		});
-	},
-
 	render: function () {
-		var {data, columns, totalCount} = this.state;
+		var {unitsList} = this.state;
 		return (
 			<div>
-				<OrganizationFileForm onFileChange={this.handleFileSelection}/>
-				<OrganizationCsvContent data={data} columns={columns} totalCount={totalCount} />
+				<OrganizationList unitsList={unitsList} onClick={this.handleUnitClick}/>
 			</div>
 		);
 	}

@@ -1,7 +1,7 @@
 {
-  "name": "miscreact",
+  "name": "reactmisc",
   "version": "1.0.0",
-  "description": "misc react app",
+  "description": "react misc app",
   "main": "index.js",
   "scripts": {
     "test": "karma start",

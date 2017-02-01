@@ -25,8 +25,11 @@ module.exports = {
       Main: 'app/components/Main.jsx',
       Navigation: 'app/components/Navigation.jsx',
       Organization: 'app/components/Organization.jsx',
-      OrganizationFileForm: 'app/components/OrganizationFileForm.jsx',
-      OrganizationCsvContent: 'app/components/OrganizationCsvContent.jsx',
+      OrganizationList: 'app/components/OrganizationList.jsx',
+      Unit: 'app/components/Unit.jsx',
+      CsvFile: 'app/components/CsvFile.jsx',
+      CsvFileContent: 'app/components/CsvFileContent.jsx',
+      CsvFileForm: 'app/components/CsvFileForm.jsx',
       Misc: 'app/components/Misc.jsx',
       applicationStyles: 'app/styles/app.scss'
     },

@@ -1,1 +1,1 @@
-Misc React App
+ReactBoilerplate
