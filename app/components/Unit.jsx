@@ -2,13 +2,16 @@ var React = require('react');
 
 var Unit = React.createClass({
   render: function(){
-    var {id, nazwa, opis, symbol, nadrzedny} = this.props;
+    var {id, nazwa, symbol, nadrzedny} = this.props;
     return (
-      <div onClick={()=>{
-        this.props.onClick(id);
-      }}>
-        {id} {nazwa} {opis} {symbol} {nadrzedny}
-      </div>
+      <tr>
+        <td>{nazwa}</td>
+        <td onClick={()=>{
+          this.props.onClick(id);}}>
+            {symbol}
+        </td>
+        <td>{nadrzedny}</td>
+      </tr>
     );
   }
 });

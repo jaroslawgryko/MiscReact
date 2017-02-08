@@ -3,18 +3,29 @@ var Unit = require('Unit');
 
 var OrganizationList = React.createClass({
   render: function(){
-    var {unitsList} = this.props;
+    var {units} = this.props;
     var renderUnits = () => {
-      return unitsList.map((unit) => {
+      return units.map((unit) => {
         return (
-          <Unit key={unit.id} {...unit} onClick={this.props.onClick}/>
+
+              <Unit key={unit.id} {...unit} onClick={this.props.onClick}/>
+
         );
       });
     };
     return(
-      <div>
+      <table>
+        <thead>
+          <tr>
+            <th>Nazwa jednostki</th>
+            <th>Symbol</th>
+            <th>Nadrzedny</th>
+          </tr>
+        </thead>
+        <tbody>
         {renderUnits()}
-      </div>
+        </tbody>
+      </table>
     );
   }
 });
