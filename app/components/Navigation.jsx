@@ -9,7 +9,13 @@ var Navigation = React.createClass({
                     <ul className="menu">
                         <li className="menu-text">Misc App</li>
                         <li>
-                            <IndexLink to="/" activeClassName="active-link">Organizacja</IndexLink>
+                            <IndexLink to="/csv" activeClassName="active-link">Import from Csv</IndexLink>
+                        </li>
+                        <li>
+                            <IndexLink to="/csvfile" activeClassName="active-link">CsvOld</IndexLink>
+                        </li>
+                        <li>
+                            <IndexLink to="/organization" activeClassName="active-link">Organizacja</IndexLink>
                         </li>
                         <li>
                             <IndexLink to="/misc" activeClassName="active-link">Misc</IndexLink>

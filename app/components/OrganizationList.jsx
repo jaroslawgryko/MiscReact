@@ -7,9 +7,7 @@ var OrganizationList = React.createClass({
     var renderUnits = () => {
       return units.map((unit) => {
         return (
-
               <Unit key={unit.id} {...unit} onClick={this.props.onClick}/>
-
         );
       });
     };
@@ -19,7 +17,7 @@ var OrganizationList = React.createClass({
           <tr>
             <th>Nazwa jednostki</th>
             <th>Symbol</th>
-            <th>Nadrzedny</th>
+            <th>Nadrzędny</th>
           </tr>
         </thead>
         <tbody>

@@ -4,7 +4,12 @@ var Table = React.createClass({
     render: function(){
         return (
             <table>
-                <Head columns={this.props.columns}/>
+                <Head
+                    columns={this.props.columns}
+                    dataTemplateType={this.props.dataTemplateType}
+                    dataTemplate={this.props.dataTemplate}
+                    dataMapping={this.props.dataMapping}
+                />
                 <Body columns={this.props.columns} data={this.props.data}/>
             </table>
         );
@@ -12,10 +17,18 @@ var Table = React.createClass({
 });
 
 var Head = React.createClass({
+  handleMappingsChange: function(){
+    var column = this.refs.column;
+    console.log(column);
+  },
   render: function(){
+    var {columns, dataTempleType, dataTemplate, dataMapping} = this.props;
+
     return (
       <thead>
-        <tr>{this.props.columns.map(column => <th key={column}>{column}</th>)}</tr>
+        <tr>
+            {columns.map(column => <th key={column}>{column}</th>)}
+        </tr>
       </thead>
     );
   }
@@ -44,11 +57,14 @@ var Row = React.createClass({
 
 var CsvFileContent = React.createClass({
   render: function(){
-      var {data, columns, totalCount} = this.props;
+      var {data, columns, totalCount, dataTemplateType, dataTemplate, dataMapping} = this.props;
       return(
           <div>
-              Wczytano: {totalCount} <br/>
-            <Table data={data} columns={columns}/>
+            <Table data={data} columns={columns}
+                   dataTemplateType={dataTemplateType}
+                   dataTemplate={dataTemplate}
+                   dataMapping={dataMapping}
+            />
           </div>
       );
   }

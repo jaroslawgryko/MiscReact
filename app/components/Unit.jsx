@@ -2,7 +2,7 @@ var React = require('react');
 
 var Unit = React.createClass({
   render: function(){
-    var {id, nazwa, symbol, nadrzedny} = this.props;
+    var {id, nazwa, symbol, nadrzędny} = this.props;
     return (
       <tr>
         <td>{nazwa}</td>
@@ -10,7 +10,7 @@ var Unit = React.createClass({
           this.props.onClick(id);}}>
             {symbol}
         </td>
-        <td>{nadrzedny}</td>
+        <td>{nadrzędny}</td>
       </tr>
     );
   }
